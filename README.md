@@ -83,6 +83,16 @@ We sincerely hope this is exciting for all of you& reading this as it is for us 
 
 We're in the process of spinning up a public Matrix space for some of our development work. As for why that's relevant... Well, for those of you& monitoring this project, just be aware that we have some interesting ideas in mind for future projects. The description for [the GitHub organization responsible for maintaining this project](https://github.com/systemic-chaos) might give you& something to ponder. It's definitely still early days, and there's no guarantee that our plans will come to fruition. But as always, stay tuned!
 
+## copyright and license notice
+
+Copyright 2022 [Arcana](https://github.com/ArcanaOfSouls) and contributors
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License along with this program. If not, see https://www.gnu.org/licenses/.
+
 ## endnotes
 
 [^0.2.0]: If you& ended up here through the endnote provided in [query paramaters](#query-parameters), congratulations! We appreciate you& taking the the time to follow our project's development. We know things have been a little slow here, but life has a way of catching up with folks, and things have indeed been hectic for our system lately. That said, we have both [an exciting news item](#road-to-version-020) and a (most likely, as far as anyone knows) unsubstantiated [rumor of possible future development](#future-projects-and-integrations) to share with those of you& who somehow wound up in this far-flung section buried at the bottom of a `README`.
