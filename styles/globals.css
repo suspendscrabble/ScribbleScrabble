@@ -22,7 +22,7 @@
     @apply list-disc list-inside;
   }
   pre code.hljs {
-    @apply whitespace-pre-wrap rounded p-2 overflow-visible !important;
+    @apply whitespace-pre-wrap rounded p-2 overflow-visible break-words !important;
   }
   span.spoilered {
     @apply bg-slate-200 dark:bg-slate-700 text-slate-200 dark:text-slate-700 rounded cursor-pointer !important;

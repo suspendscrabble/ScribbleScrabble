@@ -13,7 +13,7 @@ const Front: NextPage = () => {
   const { fronters, system } = useFrontersAndSystem([systemID, s])
 
   useEffect(() => {
-    hljs.configure({ cssSelector: 'pre code.hljs' })
+    hljs.configure({ cssSelector: 'pre code.hljs', languages: [] })
     hljs.highlightAll()
   }, [fronters, system])
 
