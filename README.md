@@ -8,13 +8,13 @@ The index automatically redirects to an example page, but folks can find their s
 
 Since we know there is a bit of a debate among users of PluralKit regarding who should be allowed to use the software and related accessibility services, we are taking the time to make our position on this matter very clear:
 
-While our web app is, like PluralKit, designed first and foremost with the use cases of plural systems in mind, we are happy to support other users of the software as well; just as [the PluralKit development team documents in their FAQ](https://pluralkit.me/faq/#can-i-use-this-bot-for-kin-roleplay-other-non-plurality-uses-can-i-use-it-if-i-m-not-plural-myself-is-that-appropriating). Those users can feel free to use our software, file issues and open pull requests on our repository, just as plural systems can. We want everyone with a potential use case for application to feel welcome to use it, even if their use case isn't the primary one for which it is designed.
+While our web app is, like PluralKit, designed first and foremost with the use cases of plural systems in mind, we are happy to support other users of the software as well, just as [the PluralKit development team documents in their FAQ](https://pluralkit.me/faq/#can-i-use-this-bot-for-kin-roleplay-other-non-plurality-uses-can-i-use-it-if-i-m-not-plural-myself-is-that-appropriating). All can feel free to use our software, and file issues and open pull requests on our repository, just as plural systems can. We want everyone with a potential use case for our application to feel welcome to use it, even if their use case isn't the primary one for which it is designed.
 
-We also explicitly support endogenic and nondisordered plural systems in their use of our software. From our perspective, there is no one "right" way to be plural. Our inclusivity of non-plural use cases similarly extends to these plural systems as well.
+We also explicitly support endogenic and nondisordered plural systems in their use of our software. From our perspective, there is no one "right" way to be plural. Our inclusion extends to these plural systems as well.
 
 We are inclusive of users of our software who disagree with us on these points as well, but users promoting such views in an issue or pull request to our repository will be ignored and directed to this section of the documentation. This repository is not a place for debates regarding acceptable use cases of an accessibility service.
 
-If any of this bothers you, please feel free to fork our repository and host it yourself, but be sure to follow the terms outlined in the [#copyright-and-license-notice].
+If any of this bothers you, please feel free to fork our repository and host it yourself, but be sure to follow the terms outlined in the [copyright and license notice](#copyright-and-license-notice).
 
 ## query parameters
 
@@ -97,7 +97,7 @@ We're in the process of spinning up a public Matrix space for some of our develo
 
 ## copyright and license notice
 
-Copyright 2022 [Arcana](https://github.com/ArcanaOfSouls) and [contributors](https://github.com/systemic-chaos/currently-fronting/graphs/contributors). Modified version of this software must maintain this copyright and license notice and adhere to the terms of the license. Modified versions must also clearly indicate which sections have been modified. Such modified versions must also clearly indicate that [Arcana](https://github.com/ArcanaOfSouls) do not provide support for modified versions of the software.
+Copyright 2022 [Arcana](https://github.com/ArcanaOfSouls) and [contributors](https://github.com/systemic-chaos/currently-fronting/graphs/contributors). Modified versions of this software must maintain this copyright and license notice and adhere to the terms of the license. Modified versions must also clearly indicate which sections have been modified. Such modified versions must also clearly indicate that [Arcana](https://github.com/ArcanaOfSouls) do not provide support for modified versions of the software.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
