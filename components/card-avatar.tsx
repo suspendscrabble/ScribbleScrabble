@@ -26,7 +26,7 @@ const CardAvatar = (props: CardAvatarProps) => {
 
   return (
     <img
-      className={`h-48 w-48 border-4 object-cover rounded ${floatClass}`}
+      className={`h-48 w-48 border-4 bg-slate-100 dark:bg-slate-800 object-cover rounded ${floatClass}`}
       src={resizedAvatarURL}
       alt={(name && `Avatar for ${name}`) || ''}
       style={{
