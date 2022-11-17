@@ -4,9 +4,21 @@ A web app for displaying a [PluralKit](https://pluralkit.me/) system's current p
 
 The index automatically redirects to an example page, but folks can find their system or a friend's at `https://front.plural.codes/system-id-here`. Just replace `system-id-here` with the system ID in question. Our page, for example, is available at https://front.plural.codes/gtyvg.
 
+## a note on inclusivity
+
+Since we know there is a bit of a debate among users of PluralKit regarding who should be allowed to use the software and related accessibility services, we are taking the time to make our position on this matter very clear:
+
+While our web app is, like PluralKit, designed first and foremost with the use cases of plural systems in mind, we are happy to support other users of the software as well; just as [the PluralKit development team documents in their FAQ](https://pluralkit.me/faq/#can-i-use-this-bot-for-kin-roleplay-other-non-plurality-uses-can-i-use-it-if-i-m-not-plural-myself-is-that-appropriating). Those users can feel free to use our software, file issues and open pull requests on our repository, just as plural systems can. We want everyone with a potential use case for application to feel welcome to use it, even if their use case isn't the primary one for which it is designed.
+
+We also explicitly support endogenic and nondisordered plural systems in their use of our software. From our perspective, there is no one "right" way to be plural. Our inclusivity of non-plural use cases similarly extends to these plural systems as well.
+
+We are inclusive of users of our software who disagree with us on these points as well, but users promoting such views in an issue or pull request to our repository will be ignored and directed to this section of the documentation. This repository is not a place for debates regarding acceptable use cases of an accessibility service.
+
+If any of this bothers you, please feel free to fork our repository and host it yourself, but be sure to follow the terms outlined in the [#copyright-and-license-notice].
+
 ## query parameters
 
-An interface for configuring query parameters is coming soon<sup>er than you& might think</sup>[^0.2.0]! Until then, below are a list of currently available query parameters for configuring the layout of your& link, along with their acceptable values. Any unacceptable value will result in the default being used instead.
+An interface for configuring query parameters is coming soon<sup>er than you might think</sup>[^0.2.0]! Until then, below are a list of currently available query parameters for configuring the layout of your link, along with their acceptable values. Any unacceptable value will result in the default being used instead.
 
 - `s`: System (requires an additional query to the PluralKit server, slightly increasing load times)
   - `true`: Display a system card at the end of the member list
@@ -24,19 +36,19 @@ An interface for configuring query parameters is coming soon<sup>er than you& mi
 
 ## query parameter examples
 
-https://front.plural.codes/gtyvg?b=text&a=none: **Banners as backgrounds, no avatars**
+https://front.plural.codes/gtyvg?b=texta=none: **Banners as backgrounds, no avatars**
 
-https://front.plural.codes/gtyvg?a=none&b=none: **No banners, no avatars**
+https://front.plural.codes/gtyvg?a=noneb=none: **No banners, no avatars**
 
-https://front.plural.codes/gtyvg?s=true&b=bottom&a=right: **System card, banners on the bottom, avatars on the right**
+https://front.plural.codes/gtyvg?s=trueb=bottoma=right: **System card, banners on the bottom, avatars on the right**
 
-https://front.plural.codes/gtyvg: Default settings (no parameters)
+https://front.plural.codes/gtyvg: **Default settings (no parameters)**
 
 ## privacy policy
 
 Requests to the [PluralKit API](https://pluralkit.me/api/) are made client-side, with responses cached client-side and automatically invalidated when data changes through an implementation of [SWR](https://swr.vercel.app/). When fronters for a system update, the cache invalidates. Upon the site's return to focus, it updates the page automatically to display the new data. The page also refreshes the cache in the background on an interval, as long as the browser tab remains in focus. This app only accesses publicly available data on fronters.
 
-To be clear: This app _does_ store data in your& browser, and it relies on that capability in order to enable automatic refreshes of fronters. None of this data is shared with any other application or website. You may opt to disable web storage APIs for this application at any time through your& browser settings. The site will still work with manual refreshes of the tab in your& browser if you disable storage, but automatic refreshes will not be possible without a client-side cache to compare against.
+To be clear: This app _does_ store data in your browser, and it relies on that capability in order to enable automatic refreshes of fronters. None of this data is shared with any other application or website. You may opt to disable web storage APIs for this application at any time through your browser settings. The site will still work with manual refreshes of the tab in your browser if you disable storage, but automatic refreshes will not be possible without a client-side cache to compare against.
 
 This app uses [Vercel Analytics](https://vercel.com/analytics) to generate aggregate performance metrics via Web Vitals. (We do _not_ use Vercel Analytics Audiences.) IP addresses are not logged; nor are device manufacturers or models. Vercel Analytics only logs the broad device categories of phone, tablet and PC, along with the necessary data points to calculate [Web Vitals](https://web.dev/vitals/). The URL visited is also logged. Having access to this data is immensely helpful, both in encouraging us to keep developing (since we can determine the approximate number of systems being viewed in a given week, a number that is steadily increasing); and in measuring the overall performance benefit or detriment of implementing specific changes.
 
@@ -46,11 +58,11 @@ This app is currently hosted on [Vercel](https://vercel.com/).
 
 ## bug reporting and feature requests
 
-If you& encounter an issue with the app, please feel free to file a GitHub issue in this project[^discord]. Similarly, feel free to do the same if you& would like to see a particular feature implemented in the future.
+If you encounter an issue with the app, please feel free to file a GitHub issue in this project[^discord]. Similarly, feel free to do the same if you would like to see a particular feature implemented in the future.
 
 ## road to version `0.2.0`
 
-That's right! We plan to implement an entirely new set of features for [currently fronting](https://front.plural.codes)! We'd like to give you& a sneak peak at what we've mapped out and will soon be preparing for deployment, as a special thanks for sticking with us this far into the depths of our documentation.
+That's right! We plan to implement an entirely new set of features for [currently fronting](https://front.plural.codes)! We'd like to give you a sneak peak at what we've mapped out and will soon be preparing for deployment, as a special thanks for sticking with us this far into the depths of our documentation.
 
 1. Yes! There will indeed be an interface for configuring query parameters for a system's fronters page, released as part of `0.2.0`!
 2. There will also be two new query parameters implemented before `0.2.0` is released!
@@ -77,15 +89,15 @@ Despite all these advanced capabilities, though, zero data will be processed ser
 
 If not installed as a PWA, the query parameter configuration interface will remain available, as will a new summarized view of followed systems (just without push notification capabilities).
 
-We sincerely hope this is exciting for all of you& reading this as it is for us to develop.
+We sincerely hope this is exciting for all of you reading this as it is for us to develop.
 
 ## future projects and integrations
 
-We're in the process of spinning up a public Matrix space for some of our development work. As for why that's relevant... Well, for those of you& monitoring this project, just be aware that we have some interesting ideas in mind for future projects. The description for [the GitHub organization responsible for maintaining this project](https://github.com/systemic-chaos) might give you& something to ponder. It's definitely still early days, and there's no guarantee that our plans will come to fruition. But as always, stay tuned!
+We're in the process of spinning up a public Matrix space for some of our development work. As for why that's relevant... Well, for those of you monitoring this project, just be aware that we have some interesting ideas in mind for future projects. The description for [the GitHub organization responsible for maintaining this project](https://github.com/systemic-chaos) might give you something to ponder. It's definitely still early days, and there's no guarantee that our plans will come to fruition. But as always, stay tuned!
 
 ## copyright and license notice
 
-Copyright 2022 [Arcana](https://github.com/ArcanaOfSouls) and contributors
+Copyright 2022 [Arcana](https://github.com/ArcanaOfSouls) and [contributors](https://github.com/systemic-chaos/currently-fronting/graphs/contributors). Modified version of this software must maintain this copyright and license notice and adhere to the terms of the license. Modified versions must also clearly indicate which sections have been modified. Such modified versions must also clearly indicate that [Arcana](https://github.com/ArcanaOfSouls) do not provide support for modified versions of the software.
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU Affero General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
 
@@ -95,5 +107,5 @@ You should have received a copy of the GNU Affero General Public License along w
 
 ## endnotes
 
-[^0.2.0]: If you& ended up here through the endnote provided in [query paramaters](#query-parameters), congratulations! We appreciate you& taking the the time to follow our project's development. We know things have been a little slow here, but life has a way of catching up with folks, and things have indeed been hectic for our system lately. That said, we have both [an exciting news item](#road-to-version-020) and a (most likely, as far as anyone knows) unsubstantiated [rumor of possible future development](#future-projects-and-integrations) to share with those of you& who somehow wound up in this far-flung section buried at the bottom of a `README`.
-[^discord]: We used to provide Discord contact information as a way to request support, but that was dependent on us being members of the PluralKit support server on Discord (which we are not at this time). For our own security, we don't accept Discord friend requests from users we don't share servers with. GitHub issues are currently the best way to contact us with feature requests and/or bug reports, at least until [our Matrix space is ready for access by users at large](#future-projects-and-integrations). We appreciate your& understanding in this regard.
+[^0.2.0]: If you ended up here through the endnote provided in [query paramaters](#query-parameters), congratulations! We appreciate you taking the the time to follow our project's development. We know things have been a little slow here, but life has a way of catching up with folks, and things have indeed been hectic for our system lately. That said, we have both [an exciting news item](#road-to-version-020) and a (most likely, as far as anyone knows) unsubstantiated [rumor of possible future development](#future-projects-and-integrations) to share with those of you who somehow wound up in this far-flung section buried at the bottom of a `README`.
+[^discord]: We used to provide Discord contact information as a way to request support, but that was dependent on us being members of the PluralKit support server on Discord (which we are not at this time). For our own security, we don't accept Discord friend requests from users we don't share servers with. GitHub issues are currently the best way to contact us with feature requests and/or bug reports, at least until [our Matrix space is ready for access by users at large](#future-projects-and-integrations). We appreciate your understanding in this regard.
