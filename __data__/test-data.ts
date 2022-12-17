@@ -14,13 +14,13 @@ const sampleMember: Member = {
   created: null,
   proxy_tags: [],
   keep_proxy: false,
-  privacy: null,
+  privacy: null
 }
 
 const sampleSwitch: Switch = {
   id: '',
   timestamp: '',
-  members: [sampleMember],
+  members: [sampleMember]
 }
 
 export { sampleMember, sampleSwitch }

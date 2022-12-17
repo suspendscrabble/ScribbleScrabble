@@ -1,4 +1,4 @@
-name: 'Audit code and check style'
+name: 'Audit and lint'
 
 on:
   push:
@@ -9,13 +9,12 @@ on:
 
 jobs:
   audit-lint-and-prettify:
-    name: Audit, lint and prettify
+    name: Audit and lint
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [16.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+        node-version: [18.x]
 
     steps:
       - uses: actions/checkout@v3
@@ -27,4 +26,3 @@ jobs:
       - run: npm ci --audit=false
       - run: npm audit --omit=dev
       - run: npm run lint
-      - run: npm run prettify

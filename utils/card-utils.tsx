@@ -3,7 +3,7 @@ import {
   Element,
   HTMLReactParserOptions,
   Text,
-  domToReact,
+  domToReact
 } from 'html-react-parser'
 import { DateTime, DateTimeFormatOptions } from 'luxon'
 import CardSpoiler from '../components/card-spoiler'
@@ -46,24 +46,24 @@ const htmlReactParserOptions: HTMLReactParserOptions = {
           const timestamp = DateTime.fromSeconds(parseInt(p1))
           const format: string = p2 ? p2[1] : 'f'
           if (format !== 'R') {
-            let dateTimeFormatOptions = {
+            const dateTimeFormatOptions = {
               t: { timeStyle: 'short' },
               T: { timeStyle: 'medium' },
               d: { dateStyle: 'short' },
               D: { dateStyle: 'medium' },
               f: { dateStyle: 'medium', timeStyle: 'short' },
-              F: { dateStyle: 'full', timeStyle: 'short' },
+              F: { dateStyle: 'full', timeStyle: 'short' }
             }[format]
             return timestamp.toLocaleString(
-              dateTimeFormatOptions as DateTimeFormatOptions,
+              dateTimeFormatOptions as DateTimeFormatOptions
             )
           }
           return timestamp.toRelative() as string
-        },
+        }
       )
       return <span>{formattedDateTime}</span>
     }
-  },
+  }
 }
 
 export { htmlReactParserOptions }

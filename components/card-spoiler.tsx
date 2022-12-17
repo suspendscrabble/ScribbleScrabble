@@ -16,7 +16,7 @@ const CardSpoiler = (props: CardSpoilerProps) => {
       className={classNameWithSpoileredStatus}
       onClick={() =>
         setSpoileredStatus(
-          spoileredStatus === 'spoilered' ? 'unspoilered' : 'spoilered',
+          spoileredStatus === 'spoilered' ? 'unspoilered' : 'spoilered'
         )
       }>
       {children}

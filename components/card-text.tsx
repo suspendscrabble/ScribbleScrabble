@@ -13,7 +13,7 @@ const CardText = (props: CardTextProps) => {
 
   return (
     <div className={className}>
-      {parse(toHTML(text, { embed: embed }), htmlReactParserOptions)}
+      {parse(toHTML(text, { embed }), htmlReactParserOptions)}
     </div>
   )
 }

@@ -3,12 +3,14 @@ import Front from '../../pages/[systemID]'
 import 'next/router'
 
 jest.mock('next/router', () => ({
-  useRouter: () => ({ query: { systemID: 'invalid' } }),
+  useRouter: () => ({ query: { systemID: 'invalid' } })
 }))
-const getFrontersAndSystem = jest.fn(async () => ({
-  fronters: null,
-  system: null,
-}))
+
+// TODO: Implement tests with additional faked API responses
+// const getFrontersAndSystem = jest.fn(async () => ({
+//   fronters: null,
+//   system: null
+// }))
 
 afterEach(() => {
   jest.clearAllMocks()
