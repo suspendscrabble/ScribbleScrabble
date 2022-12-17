@@ -51,15 +51,15 @@ const Front: NextPage = () => {
     <div className='flex flex-col justify-between min-h-screen'>
       <Head>
         <title>
-          {fronters
+          {(fronters != null)
             ? fronters.members.map(member => member.name).join(' | ')
             : 'currently fronting'}
         </title>
         <meta
           name='description'
           content={
-            system
-              ? `Current fronters for ${system.name}`
+            (system != null)
+              ? `Current fronters${(system.name && ` for ${system.name}`) ?? ''}`
               : "a web app for displaying a PluralKit system's current public fronters"
           }
         />
@@ -67,7 +67,7 @@ const Front: NextPage = () => {
       </Head>
 
       <div className='container mx-auto p-2 flex flex-row flex-wrap justify-center gap-2'>
-        {fronters &&
+        {
           fronters?.members.map(member => (
             <Card
               key={member.uuid}
@@ -77,7 +77,7 @@ const Front: NextPage = () => {
             />
           ))}
 
-        {system && (
+        {(system != null) && (
           <Card
             data={system}
             bannerPosition={bannerPosition}

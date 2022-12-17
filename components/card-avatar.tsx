@@ -9,8 +9,8 @@ interface CardAvatarProps {
 }
 
 const CardAvatar = (props: CardAvatarProps) => {
-  const { name, avatar_url, color, avatarPosition } = props
-  const resizedAvatarURL = resizeMedia(avatar_url)
+  const { name, avatar_url: avatarURL, color, avatarPosition } = props
+  const resizedAvatarURL = resizeMedia(avatarURL)
 
   let floatClass: string
   switch (avatarPosition) {
@@ -28,9 +28,9 @@ const CardAvatar = (props: CardAvatarProps) => {
     <img
       className={`h-48 w-48 border-4 bg-slate-100 dark:bg-slate-800 object-cover rounded ${floatClass}`}
       src={resizedAvatarURL}
-      alt={(name && `Avatar for ${name}`) || ''}
+      alt={name ? `Avatar for ${name}` : 'Avatar'}
       style={{
-        borderColor: `#${color}`,
+        borderColor: `#${color}`
       }}
       width={256}
       height={256}

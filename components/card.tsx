@@ -15,11 +15,11 @@ const Card = (props: CardProps) => {
   const { data, bannerPosition, avatarPosition } = props
   const name = data.name
   const banner = data.banner
-  const avatar_url = data.avatar_url
+  const avatarURL = data.avatar_url
   const color = data.color
   const pronouns = data.pronouns
   const description = data.description
-  const display_name = 'display_name' in data ? data.display_name : 'System'
+  const displayName = 'display_name' in data ? data.display_name : 'System'
   const birthday = 'birthday' in data ? data.birthday : null
 
   const cardClasses =
@@ -36,12 +36,12 @@ const Card = (props: CardProps) => {
               text={name}
             />
           )}
-          {display_name && (
+          {displayName && (
             <CardText
               className='text-lg italic'
               embed={false}
               htmlReactParserOptions={htmlReactParserOptions}
-              text={display_name}
+              text={displayName}
             />
           )}
           {pronouns && (
@@ -58,10 +58,10 @@ const Card = (props: CardProps) => {
         <CardBanner name={name} banner={banner} />
       )}
       <div>
-        {avatar_url && avatarPosition !== 'none' && (
+        {avatarURL && avatarPosition !== 'none' && (
           <CardAvatar
             name={name}
-            avatar_url={avatar_url}
+            avatar_url={avatarURL}
             color={color}
             avatarPosition={avatarPosition}
           />
@@ -77,12 +77,12 @@ const Card = (props: CardProps) => {
                   text={name}
                 />
               )}
-              {display_name && (
+              {displayName && (
                 <CardText
                   className='text-lg italic'
                   embed={false}
                   htmlReactParserOptions={htmlReactParserOptions}
-                  text={display_name}
+                  text={displayName}
                 />
               )}
               {pronouns && (

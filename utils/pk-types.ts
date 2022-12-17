@@ -68,5 +68,5 @@ export type {
   System,
   MemberPrivacy,
   Member,
-  Switch,
+  Switch
 }

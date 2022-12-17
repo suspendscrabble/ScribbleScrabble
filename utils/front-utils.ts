@@ -10,12 +10,12 @@ type FrontersAndSystemKey = string | string[] | undefined
 
 const getFrontersAndSystem = async (
   systemID: FrontersAndSystemKey,
-  includeSystem: FrontersAndSystemKey,
+  includeSystem: FrontersAndSystemKey
 ) => {
   let system: System | null = null
   if (includeSystem === 'true' && typeof systemID === 'string') {
     const systemData = await fetch(
-      `https://api.pluralkit.me/v2/systems/${systemID}`,
+      `https://api.pluralkit.me/v2/systems/${systemID}`
     )
     if (systemData.ok) {
       system = await systemData.json()
@@ -25,7 +25,7 @@ const getFrontersAndSystem = async (
   let fronters: Switch | null = null
   if (typeof systemID === 'string') {
     const frontersData = await fetch(
-      `https://api.pluralkit.me/v2/systems/${systemID}/fronters`,
+      `https://api.pluralkit.me/v2/systems/${systemID}/fronters`
     )
     if (frontersData.ok) {
       fronters = await frontersData.json()
@@ -36,15 +36,15 @@ const getFrontersAndSystem = async (
 }
 
 const useFrontersAndSystem = (
-  frontersAndSystemKeys: FrontersAndSystemKey[],
+  frontersAndSystemKeys: FrontersAndSystemKey[]
 ) => {
   const { data } = useSWR<FrontersAndSystem>(
     [frontersAndSystemKeys[0], frontersAndSystemKeys[1]],
-    (systemID, includeSystem) => getFrontersAndSystem(systemID, includeSystem),
-    { refreshInterval: 30 * 1000 },
+    async (systemID, includeSystem) => await getFrontersAndSystem(systemID, includeSystem),
+    { refreshInterval: 30 * 1000 }
   )
 
-  return data ? data : { fronters: null, system: null }
+  return (data != null) ? data : { fronters: null, system: null }
 }
 
 export { getFrontersAndSystem, useFrontersAndSystem }
