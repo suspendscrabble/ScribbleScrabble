@@ -10,7 +10,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "npx eslint --fix .",
+    "lint": "npx eslint .",
     "lint:dev": "npx eslint --fix .",
     "test": "npx jest --ci",
     "test:dev": "npx jest --watch"
