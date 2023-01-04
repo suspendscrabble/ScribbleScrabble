@@ -16,7 +16,7 @@ describe('get fronters and system from the PluralKit API', () => {
       return new Response(null, { status: 404 })
     })
 
-    const { fronters, system } = await getFrontersAndSystem('invalid', 'true')
+    const { fronters, system } = await getFrontersAndSystem(['invalid', 'true'])
     expect(fronters).toBeNull()
     expect(system).toBeNull()
     expect(fetch).toHaveBeenCalledTimes(2)
@@ -27,7 +27,7 @@ describe('get fronters and system from the PluralKit API', () => {
       return new Response(JSON.stringify(sampleSwitch), { status: 200 })
     })
 
-    const { fronters } = await getFrontersAndSystem('invalid', 'false')
+    const { fronters } = await getFrontersAndSystem(['invalid', 'false'])
     expect(fronters).toHaveProperty('id')
     expect(fronters?.members).toHaveLength(1)
     expect(fronters?.members[0].id).not.toBeNull()
