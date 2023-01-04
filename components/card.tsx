@@ -20,7 +20,7 @@ const Card = (props: CardProps) => {
   const pronouns = data.pronouns
   const description = data.description
   const displayName = 'display_name' in data ? data.display_name : 'System'
-  const birthday = 'birthday' in data ? data.birthday : null
+  const birthday = 'birthday' in data ? data.birthday?.replace(/^0{3}4-/, '') : null
 
   const cardClasses =
     'container max-w-md p-2 bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-slate-50 text-center rounded flex flex-col gap-2'
