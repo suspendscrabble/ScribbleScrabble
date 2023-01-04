@@ -8,10 +8,8 @@ interface FrontersAndSystem {
 
 type FrontersAndSystemKey = string | string[] | undefined
 
-const getFrontersAndSystem = async (
-  systemID: FrontersAndSystemKey,
-  includeSystem: FrontersAndSystemKey
-) => {
+const getFrontersAndSystem = async (key: FrontersAndSystemKey[]) => {
+  const [systemID, includeSystem] = key
   let system: System | null = null
   if (includeSystem === 'true' && typeof systemID === 'string') {
     const systemData = await fetch(
@@ -40,7 +38,7 @@ const useFrontersAndSystem = (
 ) => {
   const { data } = useSWR<FrontersAndSystem>(
     [frontersAndSystemKeys[0], frontersAndSystemKeys[1]],
-    async (systemID, includeSystem) => await getFrontersAndSystem(systemID, includeSystem),
+    async ([systemID, includeSystem]) => await getFrontersAndSystem([systemID, includeSystem]),
     { refreshInterval: 30 * 1000 }
   )
 
